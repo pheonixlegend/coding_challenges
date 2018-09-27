@@ -42,6 +42,7 @@ else {
 
 // Coding Challenge number 3
 
+/*
 var bill, amount, tips, finalAmount;
 
 function calculateTip(bill) {
@@ -66,3 +67,6 @@ console.log(tips);
 
 finalAmount = ["$" + (tips[0] + 124), "$" + (tips[1] + 48), "$" + (tips[2] + 268)];
 console.log(finalAmount);
+
+*/
+
