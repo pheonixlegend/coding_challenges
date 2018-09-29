@@ -70,3 +70,47 @@ console.log(finalAmount);
 
 */
 
+// Coding Challenge number 4
+
+/*
+var mark = {
+    fullName: 'Mark Woolsworth',
+    mass: 78,
+    height: 1.69,
+    bmi: 0,
+    bmicalculate: function() {
+        var finalbmi = this.mass / (this.height * this.height);
+        return finalbmi;
+    }
+};
+
+var john = {
+    fullName: 'John Cole',
+    mass: 92,
+    height: 1.95,
+    bmi: 0,
+    bmicalculate: function() {
+        var finalbmi = this.mass / (this.height * this.height);
+        return finalbmi;
+
+    }
+};
+
+mark.bmi = mark.bmicalculate();
+john.bmi = john.bmicalculate();
+
+console.log(mark, john);
+
+if (mark.bmi > john.bmi) {
+    console.log(mark.fullName + ' has the highest BMI. His BMI is ' + mark.bmi);
+}
+
+else if (john.bmi > mark.bmi) {
+    console.log(john.fullName + ' has the highest BMI. His BMI is ' + john.bmi);
+}
+
+else console.log('John and Mark have the same BMI and it\'s ' + john.bmi);
+*/
+
+
+
