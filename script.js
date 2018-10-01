@@ -122,6 +122,7 @@ for (var i = 0; i < 10; i++) {
 
 
 // Looping FORWARDS & BACKWARDS
+/*
 console.log('Lets Loop FORWARD');
 
 var john = ['John', 'Smith', 'Sierra Leone', 1991, 'Software Engineer'];
@@ -137,50 +138,119 @@ console.log('Now lets Loop BACKWARDS');
 for (var i = john.length - 1; i >= 0; i--) {
     console.log(john[i]);
 }
+*/
 
 
 
 
+// Challenge number 5
+// var bill;
+
+var johnBills = {
+    restaurants: [124, 48, 268, 180, 42],
+    arrayTips: [],
+    arrayFinalPaidAmount: [],
+    tipCalculate: function(){
+        for (var i = 0; i < this.restaurants.length; i++) {
+            var tipamount;
+           // if (typeof bills !== 'number') continue;
+            if (this.restaurants[i] < 50) {
+            // return 0.2 * bill;
+                tipamount = 0.2 * this.restaurants[i];
+             //   console.log(tipamount);
+                this.arrayTips.push(tipamount);
+                this.arrayFinalPaidAmount.push(tipamount + this.restaurants[i]);
+            }
+
+        else if (this.restaurants[i] > 50 && this.restaurants[i] <= 200) {
+                tipamount = 0.15 * this.restaurants[i];
+             //   console.log(tipamount);
+                this.arrayTips.push(tipamount);
+                this.arrayFinalPaidAmount.push(tipamount + this.restaurants[i]);
+            }
+
+        else if (this.restaurants[i] > 200) {
+                tipamount = 0.1 * this.restaurants[i];
+             //   console.log(tipamount);
+                this.arrayTips.push(tipamount);
+                this.arrayFinalPaidAmount.push(tipamount + this.restaurants[i]);
+            }
+        }
+    }
+};
+
+johnBills.tipCalculate();
+// console.log(bills.restaurants.length);
+console.log('Array containing all tips ' + johnBills.arrayTips);
+console.log('Array containing all final paid amounts ' + johnBills.arrayFinalPaidAmount);
+//console.log(bills.tipCalculate(bills.res1));
 
 
+var markBills = {
+    restaurants: [77, 375, 110, 45],
+    arrayTips: [],
+    arrayFinalPaidAmount: [],
+    tipCalculate: function(){
+        for (var i = 0; i < this.restaurants.length; i++) {
+            var tipamount;
+           // if (typeof bills !== 'number') continue;
+            if (this.restaurants[i] < 100) {
+            // return 0.2 * bill;
+                tipamount = 0.2 * this.restaurants[i];
+             //   console.log(tipamount);
+                this.arrayTips.push(tipamount);
+                this.arrayFinalPaidAmount.push(tipamount + this.restaurants[i]);
+            }
 
+        else if (this.restaurants[i] > 100 && this.restaurants[i] <= 300) {
+                tipamount = 0.1 * this.restaurants[i];
+             //   console.log(tipamount);
+                this.arrayTips.push(tipamount);
+                this.arrayFinalPaidAmount.push(tipamount + this.restaurants[i]);
+            }
 
+        else if (this.restaurants[i] > 300) {
+                tipamount = 0.25 * this.restaurants[i];
+             //   console.log(tipamount);
+                this.arrayTips.push(tipamount);
+                this.arrayFinalPaidAmount.push(tipamount + this.restaurants[i]);
+            }
+        }
+    }
+};
 
+markBills.tipCalculate();
+console.log('Array containing all Mark\'s tips ' + markBills.arrayTips);
+console.log('Array containing all final paid amounts by Mark ' + markBills.arrayFinalPaidAmount);
 
+var calculateJohnAverage = function(){
+    var currentTipTotal = 0;
+    for (i = 0; i < markBills.arrayTips.length; i++) {
+        currentTipTotal = currentTipTotal + markBills.arrayTips[i];
+    }
+    return currentTipTotal / markBills.arrayTips.length;
+}
 
+var calculateMarkAverage = function(){
+    var johncurrentTipTotal = 0;
+    for (i = 0; i < johnBills.arrayTips.length; i++) {
+        johncurrentTipTotal = johncurrentTipTotal + johnBills.arrayTips[i];
+    }
+    return johncurrentTipTotal / johnBills.arrayTips.length;
+}
 
+console.log(calculateJohnAverage());
+console.log(calculateMarkAverage());
 
+var johnAverage = calculateJohnAverage();
+var markAverage = calculateMarkAverage();
 
+if (johnAverage > markAverage) {
+    console.log('John has the highest tip average');
+}
 
+else if (johnAverage < markAverage) {
+    console.log('Mark has the highest tip average');
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+else console.log('Mark and John have the same tip average');
