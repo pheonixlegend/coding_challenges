@@ -112,5 +112,75 @@ else if (john.bmi > mark.bmi) {
 else console.log('John and Mark have the same BMI and it\'s ' + john.bmi);
 */
 
+// Testing Loops
+
+/*
+for (var i = 0; i < 10; i++) {
+    console.log(i);
+}
+*/
+
+
+// Looping FORWARDS & BACKWARDS
+console.log('Lets Loop FORWARD');
+
+var john = ['John', 'Smith', 'Sierra Leone', 1991, 'Software Engineer'];
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') continue;
+    console.log(john[i]);
+}
+
+console.log(' ');
+console.log('Now lets Loop BACKWARDS');
+
+
+for (var i = john.length - 1; i >= 0; i--) {
+    console.log(john[i]);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
