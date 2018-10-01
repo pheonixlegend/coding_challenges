@@ -187,7 +187,7 @@ console.log('Array containing all final paid amounts ' + johnBills.arrayFinalPai
 
 
 var markBills = {
-    restaurants: [77, 375, 110, 45],
+    restaurants: [77, 475, 110, 45],
     arrayTips: [],
     arrayFinalPaidAmount: [],
     tipCalculate: function(){
@@ -223,7 +223,7 @@ markBills.tipCalculate();
 console.log('Array containing all Mark\'s tips ' + markBills.arrayTips);
 console.log('Array containing all final paid amounts by Mark ' + markBills.arrayFinalPaidAmount);
 
-var calculateJohnAverage = function(){
+var calculateMarkAverage = function(){
     var currentTipTotal = 0;
     for (i = 0; i < markBills.arrayTips.length; i++) {
         currentTipTotal = currentTipTotal + markBills.arrayTips[i];
@@ -231,7 +231,7 @@ var calculateJohnAverage = function(){
     return currentTipTotal / markBills.arrayTips.length;
 }
 
-var calculateMarkAverage = function(){
+var calculateJohnAverage = function(){
     var johncurrentTipTotal = 0;
     for (i = 0; i < johnBills.arrayTips.length; i++) {
         johncurrentTipTotal = johncurrentTipTotal + johnBills.arrayTips[i];
